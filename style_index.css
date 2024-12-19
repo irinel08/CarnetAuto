@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 250px;
+}
+/*BUTON REVENIRE IN SUSUL PAGINII---------------------------------------*/
+#derulare { 
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.link {
+    position: fixed;
+    padding: 10px;
+    background-color: #31d8da;
+    color: rgb(253, 253, 253);
+    z-index: 100;
+    bottom: 30px;
+    border: 0px;
+    right: 30px;
+    width: 50px;
+    height: 50px; 
+    border-radius: 50px;
+    cursor: pointer;
+}
+@media screen and (max-width:500px){
+    .link {
+        right: 50%;
+    }
+} 
+
+/*BUTON REVENIRE IN SUSUL PAGINII-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--MENIU/CONTAINER1-------------------------------------------------------------------------------------------------------------------------------------*/
+.container1 {
+    height: 850px;
+    width: 100%;
+    background-image: url("pozeIndex/fundal.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    opacity: 0;
+    animation: fade-in 2s forwards;
+}
+
+/*ANIMATIE INCARCARE PAGINA*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*ANIMATIE INCARCARE PAGINA*/
+
+
+/*IMAGINE STANGA CU LOGO-UL SI TEXTUL--------------------------*/
+.containerNavigatie {
+    position: absolute;
+    top: 5px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center; 
+}
+
+.containerNavigatie:hover .containerNavigatie1 .item1 a,
+.containerNavigatie:hover .containerNavigatie1 .item2 a {
+  color: #31d8da;
+  transition: 0.5s;
+}
+
+
+.containerNavigatie img {
+    width: 5vw;
+    min-width: 50px;
+}
+
+.containerNavigatie .containerNavigatie1 {
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+    margin-left: calc(5px + 5vw);
+}
+.containerNavigatie .containerNavigatie1 .item1 a {
+    font-size: clamp(16px, 4vw, 25px);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.containerNavigatie .containerNavigatie1 .item2 a {
+    font-size: clamp(12px, 3.5vw, 20px);
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width:335px) {        
+    .containerNavigatie {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .containerNavigatie .containerNavigatie1 {
+        margin-left: 0;
+    }
+}
+/*IMAGINE STANGA CU LOGO-UL SI TEXTUL--------------------------*/
+
+/*MESAJ CENTRAL-----------------------------------------------*/
+.containerMesajCentral {
+    position: absolute;
+    width: 100%;
+    top: 220px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.containerMesajCentral .item1 {
+    font-size: clamp(18px, 4vw, 25px);
+}
+
+.containerMesajCentral .linieOrizontala {
+    width: 60px;
+    margin: auto;
+    border: 1px solid #31d8da;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.containerMesajCentral .item3 {
+    font-size: clamp(30px, 4vw, 50px);
+    line-height: 1;
+}
+
+.containerMesajCentral .item4 {
+    font-size: clamp(18px, 4vw, 25px);
+    margin-top: 70px;
+}
+
+/*MESAJ CENTRAL-----------------------------------------------*/
+
+
+
+/*BUTON DE INCEPUT--------------------------------------------*/
+.container1 .butonInceput {
+    position: absolute;
+    text-decoration: none;
+    background-color: #31d8da;
+    top: 600px;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.container1 .butonInceput:hover {
+    font-size: 1.3em;
+}
+
+.container1 .butonInceput p {
+    padding: 10px 30px;
+}
+
+@media screen and (max-width:850px) {
+    .container1 .butonInceput {
+        top: 500px;
+        font-size: 15px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:335px) {
+    .container1 {
+        height: 700px;
+    }
+
+    .container1 .butonInceput {
+        top: 570px;
+    }
+
+    .container1 .butonInceput p {
+        padding: 5px 10px;
+    }
+}
+
+/*BUTON DE INCEPUT--------------------------------------------*/
+
+
+
+
+/*NAVIGATIE ORIZONTALA-----------------------------------------*/
+#nav1 {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    height: 30px;
+    width: 70%;
+}
+
+#nav1 a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    color: white;
+}
+#nav1 a:first-child{
+    color: #31d8da;
+}
+
+#nav1 a:hover {
+    color: #31d8da;
+    transition: 0.5s;
+}
+
+@media screen and (max-width:1100px) {
+    #nav1 {
+        display: none;
+    }
+}
+/*NAVIGATIE ORIZONTALA-----------------------------------------*/
+
+/*NAVIGATIE VERTICALA-----------------------------------------*/
+#buton_meniu {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    display: none;
+    width: 90%;
+    margin: 5%;
+    z-index: 101;
+    background: transparent;
+    top: 80px;
+}
+
+.poza_meniu {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#nav2 {
+    position: absolute;
+    width: 90%;
+    margin: 5%;
+    border: 1px solid #ffffff;
+    transition: 1s;
+    transform: rotateX(-90deg);
+    z-index: 1001;
+    top: 120px;
+}
+#nav2 a {
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 12px;
+    background-color: white;
+    font-size: large;
+    color: black;
+}
+#nav2 a:first-child{
+    background-color: #31d8da;
+}
+#nav2 a:hover:not(:first-child){
+    background-color: rgb(207, 207, 207);
+}
+
+@media screen and (max-width:1100px) {
+    #buton_meniu {
+        display: block;
+        top: 120px;
+    }    
+    #nav2 {
+        top: 160px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #buton_meniu {
+        top: 120px;
+    }
+
+    #nav2 {
+        top: 160px;
+    }
+}
+
+/*NAVIGATIE VERTICALA-----------------------------------------*/
+
+
+
+
+/*--MENIU/CONTAINER1-----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*CONTAINER2-------------------------------------------------------------------------------------------------------------------------------------------*/
+.container2 {
+    padding: 0 80px;
+    opacity: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 120px;
+    min-height: 800px;
+}
+
+.container2 img {
+    float: right;
+    width: 63%;
+    min-width: 300px;
+    max-width:1000px;
+    border-radius: 10px;
+
+}
+
+.container2 .linieOrizontala {
+    width: 60px;
+    border: 1px solid #31d8da;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container2 p {
+    width: 30%;
+}
+ 
+.container2 .item1 {
+    font-size: 25px;
+    font-weight: 200;
+    color: #333333;
+}
+
+.container2 .item2 {
+    color: #828282;
+    font-size: 18px;
+}
+.container2 a {
+    text-decoration: none;
+    padding: 20px 30px;
+    background-color: #31d8da;
+    border-radius: 50px;
+    color: white;
+    line-height: 10;
+    transition: 0.5s;
+}
+.container2 a:hover {
+    font-size: 1.1em;
+}
+
+@media screen and (min-width:1400px) {
+    .container2{
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container2 img {
+        float: none;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .container2 p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .container2 {
+        padding: 0px 10px;
+    }
+
+}
+
+/*CONTAINER2-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*CONTAINER3-------------------------------------------------------------------------------------------------------------------------------------------*/
+.container3 {
+    width: 100%;
+    height: 550px;
+    background-image: linear-gradient(rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url("pozeIndex/accidente.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    opacity: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.container3 .linieOrizontala {
+    width: 60px;
+    border: 1px solid #31d8da;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container3 .item1 {
+    position: absolute;
+    left: 50%;
+    padding: 150px 150px 0 0;
+}
+
+.container3 a {
+    text-decoration: none;
+    background-color: #31d8da;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    padding: 20px 30px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.container3 a:hover {
+    font-size: 1.3em;
+}
+
+@media screen and (max-width:1000px) {
+    .container3 .item1 {
+        left: 0;
+        padding: 50px 50px 0 10px;
+    }
+
+    .container3 a {
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+}
+
+/*CONTAINER3-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*CONTAINER4-------------------------------------------------------------------------------------------------------------------------------------------*/
+.container4 {
+    text-align: center;
+    opacity: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.container4 .linieOrizontala {
+    width: 60px;
+    border: 1px solid #31d8da;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+}
+
+.container4 .item1 {
+    color: black;
+    font-size: 20px;
+}
+
+.container4 .container41 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px;
+}
+
+.container4 .container41 h3 {
+    font-size: 22px;
+}
+
+.container4 .container41 .item1 .item11,
+.container4 .container41 .item2 .item21,
+.container4 .container41 .item3 .item31 {
+    text-align: left;
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+@media screen and (max-width:850px) {
+    .container4 .container41 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container4 .container41 .item3 {
+        grid-column: span 2;
+        border-top: 3px solid #31d8da;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container4 .container41 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container4 .container41 .item2 {
+        grid-column: span 1;
+        border-top: 3px solid #31d8da;
+    }
+
+    .container4 .container41 .item3 {
+        grid-column: span 1;
+    }
+}
+
+/*CONTAINER4-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*SUBSOL-------------------------------------------------------------------------------------------------------------------------------------------*/
+.subsol {
+    background-color: #18181a;
+    padding: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 100px;
+    opacity: 0;
+}
+.subsol1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.subsol .subsol1 .item1,
+.subsol .subsol1 .item2,
+.subsol .subsol1 .item3 {
+    margin-top: 50px;
+}
+
+.subsol .subsol1 .item1 .item11 img {
+    float: left;
+    width: 60px;
+}
+
+.subsol .subsol1 .item1 .item11 .item111 {
+    padding-top: 20px;
+    padding-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subsol .subsol1 .item1 .item11 .item112 {
+    padding-left: 75px;
+    font-size: 14px;
+}
+
+.subsol .subsol1 .item1 .item13 * {
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.subsol .subsol1 .item1 .item13 a:hover svg path {
+    fill: #31d8da
+}
+
+.subsol .subsol1 .item2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subsol .subsol1 .item2 ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subsol .subsol1 .item2 ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.subsol .subsol1 .item2 ul li a:hover {
+    color: #31d8da;
+}
+
+.subsol .subsol1 .item2 ul li svg {
+    margin-right: 10px;
+}
+
+@media screen and (max-width:850px) {
+    .subsol .subsol1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subsol .subsol1 .item3 {
+        grid-column: span 2;
+        border-top: 1px solid #31d8da;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .subsol .subsol1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .subsol .subsol1 .item2 {
+        grid-column: span 1;
+        border-top: 1px solid #31d8da;
+        padding-top: 50px;
+    }
+
+    .subsol .subsol1 .item3 {
+        grid-column: span 1;
+    }
+}
+.subsol .subsol1 .item3 .item31{
+    margin-left: 10px;
+}
+.subsol .subsol1 .item3 .item33{
+    margin-left: 10px;
+}
+.copyRight{
+    background-color: black;
+    padding: 20px 50px;
+    color: white;
+    width: 100%;
+    margin: 30px 0 -50px -50px;
+}
+
+/*SUBSOL-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*ANIMATII--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* DESCHIDE MENIUL------------------- */
+@keyframes animatie_open {
+    from {
+        transform: rotateX(-90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+/* ASCUNDE MENIUL------------------------ */
+@keyframes animatie_close {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(-90deg);
+    }
+}
+
+
+
+/*BARE DE DERULARE--------------------------------------------------------------------------------------------------------*/
+/* Pentru WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #31d8da;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2ac3c5;
+}
+
+/* Pentru Firefox */
+::-moz-scrollbar {
+    width: 10px;
+}
+
+::-moz-scrollbar-thumb {
+    background-color: #31d8da;
+}
+
+/*BARE DE DERULARE--------------------------------------------------------------------------------------------------------*/
+
+
